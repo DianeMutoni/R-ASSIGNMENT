@@ -1,7 +1,9 @@
 ---
 title: "assignment r"
-format: html
-editor: Diane MUTONI
+format:
+  html:
+    embed-resources: true
+author: "Diane MUTONI"
 ---
 
 ## 1.import data from excel file
@@ -31,8 +33,7 @@ summary(students_marks)
 ## 3.1 SPSS file
 
 ```{r}
-install.packages("readxl")
-install.packages("haven")
+
 
 library(readxl)
 library(haven)
@@ -62,7 +63,6 @@ tail(dta_data)
 ## 4.1With Microsoft access
 
 ```{r}
-install.packages(c("DBI", "odbc"))
 library(DBI)
 library(odbc)
 
@@ -114,7 +114,7 @@ dbDisconnect(con)
 ### 4.2import data using Msqlite
 
 ```{r}
-install.packages(c("DBI", "RSQLite"))
+
 
 RSQLite::SQLite()
 # "C:/Users/FALCON TECHNOLOGY/Desktop/Advanced DB/UniversityStudentDB.db"
@@ -169,7 +169,7 @@ dbDisconnect(sqlite_con)
 
 ```{r}
 
-install.packages("RMariaDB")
+
 library(DBI)
 library(odbc)
 library(RMariaDB)
@@ -218,7 +218,7 @@ print(dbReadTable(mysql_con, "Result"))
 ## 1.bar plot
 
 ```{r}
-install.packages("ggplot2")
+
 library(ggplot2)
 data("iris")
 View(iris)
